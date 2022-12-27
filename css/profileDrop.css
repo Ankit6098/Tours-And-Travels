@@ -1,0 +1,150 @@
+﻿@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900&subset=latin,latin-ext);
+
+
+
+
+ul, li {
+    list-style: none;
+}
+
+body, div, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+.i-block {
+    display: inline-block;
+}
+
+.pull-left {
+    float: left;
+}
+
+.pull-right {
+    float: right;
+}
+
+.header {
+    height: 50px;
+    background: #34495e;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    color: #fff;
+}
+
+.profile {
+    height: 100%;
+    min-width: 220px;
+    width: auto;
+    padding: 0 10px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+    .profile:after {
+        content: "▾";
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translate(-10px, -50%);
+        transition: transform 0.2s;
+    }
+
+    .profile:hover:after {
+        transform: translate(-10px, -50%) rotate(180deg);
+    }
+
+.profile__avatar {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    position: relative;
+    top: 50%;
+    margin-top: -17.5px;
+    background: #9b59b6;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.profile__monogram {
+    height: 100%;
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.profile__name {
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px 0 15px;
+}
+
+.menu {
+    display: block;
+    width: 220px;
+    transition: all 0.2s;
+    position: absolute;
+    right: 0;
+    top: 50px;
+    background: #2c3e50;
+    color: #bfbfbf;
+}
+
+.profile .menu {
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+}
+
+.profile:hover .menu {
+    visibility: visible;
+    opacity: 1;
+    height: 180px;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+    .profile:hover .menu .menu__item {
+        visibility: visible;
+        opacity: 1;
+    }
+
+        .profile:hover .menu .menu__item:nth-child(1) {
+            transition: opacity 0.2s 0.12s, transform 0.2s;
+        }
+
+        .profile:hover .menu .menu__item:nth-child(2) {
+            transition: opacity 0.2s 0.16s, transform 0.2s;
+        }
+
+        .profile:hover .menu .menu__item:nth-child(3) {
+            transition: opacity 0.2s 0.2s, transform 0.2s;
+        }
+
+        .profile:hover .menu .menu__item:nth-child(4) {
+            transition: opacity 0.2s 0.24s, transform 0.2s;
+        }
+
+.menu__item {
+    display: block;
+    height: 45px;
+    line-height: 45px;
+    cursor: pointer;
+    padding: 0 10px 0 15px;
+    visibility: hidden;
+    opacity: 0;
+}
+
+    .menu__item:hover {
+        background: #9b59b6;
+        color: #f2f2f2;
+        transform: scale(1.075);
+        box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+    }
